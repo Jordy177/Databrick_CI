@@ -29,3 +29,12 @@ steps:
 - script: |
     bash $AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
   displayName: 'Create python wheels'
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**/dist'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: PythonWheels
