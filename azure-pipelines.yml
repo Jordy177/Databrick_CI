@@ -32,7 +32,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '**\dist\**'
+    contents: |
+    **\dist\**
     targetFolder: $(Build.ArtifactStagingDirectory)\whl
 - task: PublishBuildArtifacts@1
   inputs:
