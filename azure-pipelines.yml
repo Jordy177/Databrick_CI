@@ -32,8 +32,8 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '**/dist'
-    targetFolder: $(Build.ArtifactStagingDirectory)
+    contents: '**\dist\**'
+    targetFolder: $(Build.ArtifactStagingDirectory)\whl
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: $(Build.ArtifactStagingDirectory)
