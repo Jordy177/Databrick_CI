@@ -24,3 +24,7 @@ steps:
     echo "SYSTEM_HOSTTYPE is $SYSTEM_HOSTTYPE"
     echo "Over and out."
   displayName: 'Run a multi-line script'
+
+- script: |
+    bash $AGENT_WORKFOLDER/install_scripts/create_packages.sh
+  displayName: 'Create python wheels'
