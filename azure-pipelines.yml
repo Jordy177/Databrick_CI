@@ -26,6 +26,6 @@ steps:
     echo "Over and out."
   displayName: 'Run a multi-line script'
 
-# - script: |
-#     bash AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
-#   displayName: 'Create python wheels'
+- script: |
+    bash $AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
+  displayName: 'Create python wheels'
