@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: pip install wheel
+  displayName: 'Install dependencies'
+
+- script: |
+    echo "Hello World"
+    echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
+    echo "AGENT_WORKFOLDER contents:"
+    ls -1 $AGENT_WORKFOLDER
+    echo "AGENT_BUILDDIRECTORY is $AGENT_BUILDDIRECTORY"
+    echo "AGENT_BUILDDIRECTORY contents:"
+    ls -1 $AGENT_BUILDDIRECTORY
+    echo "SYSTEM_HOSTTYPE is $SYSTEM_HOSTTYPE"
+    echo "Over and out."
+  displayName: 'Run a multi-line script'
