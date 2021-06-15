@@ -1,6 +1,6 @@
 #!/bin/bash
 PWD=`pwd`
-ROOT_DIR="../distributions"
+ROOT_DIR="$AGENT_BUILDDIRECTORY/s/distributions"
 
 for dir in ${ROOT_DIR}; 
     do 
