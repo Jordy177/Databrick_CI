@@ -21,6 +21,11 @@ steps:
     echo "AGENT_BUILDDIRECTORY is $AGENT_BUILDDIRECTORY"
     echo "AGENT_BUILDDIRECTORY contents:"
     ls -1 $AGENT_BUILDDIRECTORY
+    ls -1 $AGENT_BUILDDIRECTORY/s
     echo "SYSTEM_HOSTTYPE is $SYSTEM_HOSTTYPE"
     echo "Over and out."
   displayName: 'Run a multi-line script'
+
+- script: |
+    bash $AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
+  displayName: 'Create python wheels'
