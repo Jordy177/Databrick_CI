@@ -33,7 +33,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     contents: |
-      $AGENT_BUILDDIRECTORY/s/**/dist/**
+      $AGENT_BUILDDIRECTORY/s/distributions/*/dist/*
     targetFolder: $(Build.ArtifactStagingDirectory)\whl
 - task: PublishBuildArtifacts@1
   inputs:
