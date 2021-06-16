@@ -41,8 +41,10 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: $(Build.Repository.LocalPath)/** 
-    TargetFolder: $(Build.ArtifactStagingDirectory)
+    sourceFolder: $(Build.Repository.LocalPath)/
+    contents: |
+      **/install_scripts/*.py
+    targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
   inputs:
