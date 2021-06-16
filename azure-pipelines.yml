@@ -23,6 +23,7 @@ steps:
     ls -1 $AGENT_BUILDDIRECTORY
     ls -1 $AGENT_BUILDDIRECTORY/s
     echo "SYSTEM_HOSTTYPE is $SYSTEM_HOSTTYPE"
+    ls -1 $(Build.ArtifactStagingDirectory)
     echo "Over and out."
   displayName: 'Run a multi-line script'
 
