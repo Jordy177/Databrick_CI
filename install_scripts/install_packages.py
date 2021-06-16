@@ -50,7 +50,7 @@ def main():
             d = json.loads(runjson)
             print(dbfslib + ' after:' + getLibStatus(shard, token, clusterid, dbfslib))
 
-    """
+    
             # Restart if libraries uninstalled
             if i > 0:
                 values = {'cluster_id': clusterid}
@@ -80,7 +80,7 @@ def main():
         runjson = resp.text
         d = json.loads(runjson)
         print(dbfslib + ' after:' + getLibStatus(shard, token, clusterid, dbfslib))
-    """
+    
 
 def getLibStatus(shard, token, clusterid, dbfslib):
 
