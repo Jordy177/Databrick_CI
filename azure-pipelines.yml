@@ -27,8 +27,8 @@ steps:
     echo "Over and out."
   displayName: 'Run a multi-line script'
 
-- task: Bash@3
-    inputs: $AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
+- script: |
+    bash $AGENT_BUILDDIRECTORY/s/install_scripts/create_packages.sh
   displayName: 'Create python wheels'
 
 - task: CopyFiles@2
