@@ -36,6 +36,7 @@ steps:
     sourceFolder: $(Agent.BuildDirectory)/s
     contents: |
       install_scripts/*/dist/*
+    flattenFolders: True
     targetFolder: $(Build.ArtifactStagingDirectory)/whl
 - task: PublishBuildArtifacts@1
   inputs:
